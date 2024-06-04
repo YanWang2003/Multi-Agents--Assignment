@@ -7,9 +7,9 @@ import networkx as nx
 def ws_chart():
     st.title('Watts Strogatz Network')
 
-    num1_chart = st.number_input('结点总数', min_value=1, value=None, step=1, key='input_1')
-    num2_chart = st.number_input('结点初始连接数', min_value=2, value=None, step=2, key='input_2')
-    num3_chart = st.number_input('重新连接成功概率', min_value=0.0, max_value=1.0, value=None, step=0.01, key='input_3')
+    num1_chart = st.number_input('结点总数', min_value=1, value=20, step=1, key='input_1')
+    num2_chart = st.number_input('结点初始连接数', min_value=2, value=6, step=2, key='input_2')
+    num3_chart = st.number_input('重新连接成功概率', min_value=0.0, max_value=1.0, value=0.2, step=0.01, key='input_3')
 
     if st.button('绘制示意图并计算相关系数'):
         validation = ws.ws_check(num1_chart, num2_chart, num3_chart)

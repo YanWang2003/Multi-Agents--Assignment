@@ -5,12 +5,15 @@ import boids_model as bd
 
 
 def bd_chart():
+    # 模型标题
     st.title('Boids Network')
+
+
     col1, col2 = st.columns(2)
     with col1:
-        num1_chart = st.number_input('鸟群数量', min_value=1, value=None, step=1, key='input_1')
+        num1_chart = st.number_input('鸟群数量', min_value=1, value=50, step=1, key='input_1')
     with col2:
-        num2_chart = st.number_input('更新次数', min_value=10, value=None, step=1, key='input_2')
+        num2_chart = st.number_input('更新次数', min_value=10, value=3000, step=1, key='input_2')
 
     if st.button('计算并表征结果'):
         if type(num1_chart) != int:

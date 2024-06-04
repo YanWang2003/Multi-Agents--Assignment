@@ -45,7 +45,7 @@ def nw_check(node_number: int, connect_per_node: int, repeat_time: int, probabil
 
 # show the Newman Watts Network
 if __name__ == '__main__':
-    example = NW(10, 4, 4, 1)
+    example = NW(10, 4, 4, 0.9)
     # layout in a circle
     position = nx.shell_layout(example.G)
     nx.draw(example.G, position, with_labels=True, node_color='skyblue', node_size=700, edge_color='k')
