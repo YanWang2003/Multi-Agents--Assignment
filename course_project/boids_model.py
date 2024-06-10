@@ -44,7 +44,7 @@ class BoidsModel:
         spe_c = det_matrix_c@self.loc_birds / det_matrix_a.sum(axis=1).reshape(-1, 1) - self.loc_birds
         # rule speed
         spe_rule = spe_a*self.det_wei[0] + spe_b*self.det_wei[0] + spe_c*self.det_wei[0]
-        # normalization
+        # normalization (this is a trick)
         norms = np.linalg.norm(spe_rule, axis=1)
         spe_rule = spe_rule / norms[:, np.newaxis]
         return 2 * spe_rule

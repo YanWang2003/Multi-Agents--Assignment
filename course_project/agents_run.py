@@ -7,7 +7,7 @@ import random
 def generate_connected_graph(n_nodes):
     """
     生成一个具有n_nodes个顶点的随机连通无向图
-    图初始为一个完全图，然后随机移除边直到不形成环路但仍保持连通
+    图初始为一个完全图，然后随机移除边直到不形成环路但仍保持连通（得到一颗生成树）
     返回邻接矩阵
     """
     G = nx.complete_graph(n_nodes)  # 创建一个完全图
